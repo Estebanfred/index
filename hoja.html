@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hoja para Escribir Palabras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background: #f8f6f2;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hoja {
+        width: 420px;
+        min-height: 540px;
+        background: linear-gradient(135deg, #fffbe6 0%, #fff 100%);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px #0002, 0 0 0 2px #f5e1a4;
+        padding: 40px 32px 32px 32px;
+        position: relative;
+        font-family: "Segoe Script", "Comic Sans MS", cursive, Arial, sans-serif;
+      }
+      .hoja::before {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+        border-radius: 12px;
+        border: 1.5px dashed #f5e1a4;
+        pointer-events: none;
+      }
+      .titulo {
+        text-align: center;
+        font-size: 2em;
+        color: #e6b800;
+        margin-bottom: 18px;
+        font-family: "Segoe Script", cursive;
+        letter-spacing: 2px;
+      }
+      .linea {
+        border-bottom: 1px dashed #f5e1a4;
+        margin: 18px 0;
+      }
+      .mensaje {
+        font-size: 1.2em;
+        color: #b77b2e;
+        margin-top: 24px;
+        white-space: pre-line;
+        min-height: 200px;
+        outline: none;
+      }
+      .decoracion {
+        position: absolute;
+        bottom: 18px;
+        right: 32px;
+        font-size: 2em;
+        opacity: 0.25;
+        pointer-events: none;
+      }
+      .foto-hoja {
+        display: block;
+        margin: 0 auto 18px auto;
+        max-width: 80%;
+        max-height: 180px;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px #0001;
+        object-fit: cover;
+      }
+      /* Adaptabilidad para móviles */
+      @media (max-width: 500px) {
+        .hoja {
+          width: 96vw;
+          min-height: 70vw;
+          padding: 18vw 4vw 8vw 4vw;
+        }
+        .hoja::before {
+          top: 4vw;
+          left: 4vw;
+          right: 4vw;
+          bottom: 4vw;
+          border-radius: 6vw;
+        }
+        .titulo {
+          font-size: 1.3em;
+        }
+        .mensaje {
+          font-size: 1em;
+          min-height: 40vw;
+        }
+        .decoracion {
+          font-size: 1.5em;
+          right: 8vw;
+          bottom: 4vw;
+        }
+        .foto-hoja {
+          max-width: 96%;
+          max-height: 28vw;
+          border-radius: 6vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hoja">
+      <div class="titulo">Para alguien especial</div>
+      <div class="linea"></div>
+      <div class="mensaje" contenteditable="true">
+        Para Maricielo,
+        <p1> No soy muy bueno con las palabras, pero hoy quiero escribirte algo
+          que nace desde lo más sincero de mí, porque desde que te conocí, algo
+          dentro de mí cambió. No sé si fue tu forma de sonreír, tu manera de
+          hablar o simplemente tu energía, pero los días contigo se sienten
+          distintos … mejores. Sé que apenas estamos comenzando a conocernos, y
+          quizás por eso me cuesta expresar todo lo que siento cuando estoy
+          contigo. Cada momento, cada risa, cada mirada todo contigo tiene algo
+          especial. El otro día, cuando me besaste, sentí algo muy real. Y
+          cuando las cosas se pusieron un poco más intensas, quise respetarte,
+          no por frenar lo que siento, sino porquen vales demasiado para mí como
+          para apresurar algo tan bonito. No quiero que pienses que soy como los
+          demás. No busco algo pasajero, busco algo que se construya con verdad,
+          respeto y cariño. Quiero seguir conociéndote, sin máscaras, sin prisa…
+          y si tú también lo sientes, entonces ojalá podamos seguir escribiendo
+          esta historia juntos. Gracias por aparecer en mi vida. No sé a dónde
+          nos llevará esto, pero por primera vez en mucho tiempo, quiero
+          descubrirlo. Con cariño, Esteban</p1>
+      </div>
+      <div class="decoracion">💛🌼</div>
+      <img
+        src="IMG_20250508_151609.jpg"
+        alt="Foto especial"
+        class="foto-hoja"
+      />
+    </div>
+  </body>
+</html>
